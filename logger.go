@@ -35,6 +35,8 @@ func Logger(inner http.Handler, name string, filename string) http.Handler {
 
 		inner.ServeHTTP(w, r)
 
-    f.WriteString(fmt.Sprintf("%s\n",body))
+		if len(body)>0 {
+    	f.WriteString(fmt.Sprintf("%s\n",body))
+		}
 	})
 }
