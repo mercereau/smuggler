@@ -19,6 +19,12 @@ var routes = Routes{
 		Index,
 	},
 	Route{
+		"Options",
+		"OPTIONS",
+		"/rum",
+		Options,
+	},
+	Route{
 		"HeartBeat",
 		"GET",
 		"/healthcheck",

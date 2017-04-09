@@ -4,7 +4,11 @@ package main
 
 type Resource struct {
 	Resource	string	`json:"resource"`
-	ContentType		string	`json:"content_type"`
+	ContentType	string	`json:"content_type"`
+	InitiatorType	string	`json:"type"`
+        ClientIP	string  `json:"chi"`
+        PoP		string  `json:"pop"`
+        Browser		string  `json:"browser"`
 	BrowserCached	bool	`json:"cached"`
 	EncodedSize	int	`json:"encoded_size"`
 	DecodedSize	int	`json:"decoded_size"`
