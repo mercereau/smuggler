@@ -12,6 +12,12 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
+func Options(w http.ResponseWriter, r *http.Request) {
+        w.Header().Set("Allow", "POST, GET")
+        w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+	w.WriteHeader(http.StatusOK)
+}
+
 func HeartBeat(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprint(w, "OK")
